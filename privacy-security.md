@@ -1,30 +1,12 @@
 # Privacy & Security
 
-Area: Engineering
-Category: Privacy & Security
-Created: Jun 20, 2020 3:46 PM
-Last Edited: Oct 20, 2020 1:29 PM
-Status: In-progress
-Type: Notes
+---
+
+## **Problem?** Tracking, surveillance and centralized ecosystems. Companies track all our movements online, every click, every key stroke is being loggged and sent to remote servers. I refuse to accept that I am constantly monitored without any consent, I want to know what/how/why/when is being sent to remote servers. **Approach?** Compartmentalization,
 
 # Browsers
 
----
-
-## Problem
-
-- Tracking - companies track all our movements online
-- Surveillance - NSA, Zuck, ISP, government agencies spy on citizens
-- Centralized ecosystems - Google, Apple, Amazon etc.
-- We lost control
-
-## Approach
-
-- Compartmentalization
-
-## Solution
-
-- Optimize online privacy and security with config files and extensions.
+- Different browsers and profiles for different use cases.
 
 ## Firefox
 
