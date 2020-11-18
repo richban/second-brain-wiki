@@ -15,11 +15,10 @@ description: Building batch ETL pipelines
   * pipeline notebooks
   * `main.py` scheduled notebook that runs the entire pipeline
 * `includes`
-  * all the helper and utility functions
+  * all the operation functions and other modules
 * `configuration`
   * **Notebook with all the configuration files:**
-  * Paths
-    * to some data storage \(S3; Azure\)
+  * Paths to `bronzeTable`, `silverTable`, `goldenTable`
   * Global variables
   * Database configs
   * Connection strings
@@ -47,17 +46,13 @@ spark.sql(f"USE db_{username}")
 {"time":"2020-01-01 01:00:00","name":"Meallan O'Conarain","device_id":"3","steps":0,"day":1,"month":1,"hour":1}
 ```
 
-* ingest always raw data
+* ingest always raw \(string\) data
 * as part of ingestion process record some _metadata_
   * data source
   * ingestion time
   * ingestion date used for partitioning
-  * status new batch
+  * status, \(some kind of flag\)
 * `write` Batch to _Bronze Table_:
-
-  * with format `delta`
-  * using the `append` mode
-  * partition by `ingestdate`
 
   ```text
   df.write
@@ -86,27 +81,19 @@ LOCATION '{bronzePath}'
 
 ### 🛠️ ETL - Bronze to Silver
 
-* imports Operation Functions
-  * `read_batch_raw(rawPath)`
-  * `transform_raw(rawDF)`
-  * `batch_writer`
-  * `read_batch_bronze`
 * Transform/augment data
   * flatten JSON
   * Apply some DQ Framework
-
-      -Quarantine the bad records for later processing
-
-    * `isNull()` etc.
+    * Quarantine the bad records for later processing
 * Save the _Silver Table_
 * Update _Bronze Table_ to Reflect the Loads \(flag in bronze table which indicates if the record was inserted or not\)
-  * DataFrame is the Silver Data Frame being processed
+  * `dataframe` is the Silver Data Frame being processed
   * `bronzeTablePath` table with all the bronze data
   * `DeltaTable` API creates a reference to the _Bronze Table_ 
   * `match` is based on some unique identifier
 
 {% hint style="warning" %}
-_update\_bronze\_table\_status_ takes`SparkSession`as argument: this is a good practice, since we can pass our local `SparkSession` as parameter and run tests. On Databricks the cluster is alreaddy configured and we can just access with`spark.` 
+_update\_bronze\_table\_status_ takes`SparkSession`as argument: this is a good practice, since we can pass our local `SparkSession` as parameter and run tests. On Databricks the cluster is already configured and we can just access with`spark.` 
 {% endhint %}
 
 ```python
@@ -136,12 +123,12 @@ def update_bronze_table_status(
 
 **Notebook:** `03_silver_updates`
 
-* batch loading has no mechanism for `checkpointing` -&gt; we only want to load _new records_ from the _Bronze Table_
-* we need to explicitly harden ourselves the pipeline 
-* Handle Quarantined Records
-  * Load Quarantined Records from the _Bronze Table_
-  * Transform the Quarantined Records
-  * Batch Write the repaired \(formerly Quarantined\) records to the _Silver Table_
+* Batch loading has no mechanism for `checkpointing` - we only want to load _new records_ from the _Bronze Table_
+* We need to explicitly harden ourselves the pipeline 
+* Handle quarantined records
+  * Load quarantined records from the _Bronze Table_
+  * Transform the quarantined records
+  * Batch write the repaired \(formerly quarantined\) records to the _Silver Table_
   * Updated the _Bronze Table_ with the repaired \(formerly quarantined\) records
 
 ## 🌟 Summary
