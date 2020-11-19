@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-19T08:22:17.300Z" agent="5.0 (Macintosh)" etag="kQoeUc9TkQwFaVw5nv25" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-19T08:25:38.500Z" agent="5.0 (Macintosh)" etag="Z_WSt00hjblUjFWOC3c6" version="13.10.0" type="github">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="3566" dy="864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -177,6 +177,42 @@
         </mxCell>
         <mxCell id="dKGaRJhlv34UxvKMKv84-163" value="write" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="409" y="905" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dKGaRJhlv34UxvKMKv84-165" target="dKGaRJhlv34UxvKMKv84-169">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-165" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/management_governance/Automation_Accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="320.5" y="1094" width="32" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dKGaRJhlv34UxvKMKv84-166" target="dKGaRJhlv34UxvKMKv84-165">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-166" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Table.svg;" vertex="1" parent="1">
+          <mxGeometry x="199.43" y="1081.5" width="70.15" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-167" value="Bronze Table" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="189.5" y="1149" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-168" value="Delta Table" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="194.49999999999994" y="1054" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dKGaRJhlv34UxvKMKv84-169" target="dKGaRJhlv34UxvKMKv84-175">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-169" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Storage_Queue.svg;" vertex="1" parent="1">
+          <mxGeometry x="404.5" y="1084" width="64" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-173" value="&lt;div&gt;Read &lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="312.5" y="1064" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-174" value="Quarantined DF" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="383.5" y="1054" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-175" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/management_governance/Automation_Accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="519.5" y="1088.5" width="43" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="dKGaRJhlv34UxvKMKv84-176" value="Repair Records" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="490.5" y="1061.5" width="100" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
