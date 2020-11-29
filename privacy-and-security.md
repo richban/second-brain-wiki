@@ -5,13 +5,13 @@ description: Collection of notes and hacks how to secure your privacy and securi
 # Privacy & Security
 
 {% hint style="danger" %}
-**Problem?** Tracking, surveillance and centralized ecosystems. **Approach?** Compartmentalization. **Goal?** improve privacy and security literacy; reduce fingerprinting; take back control; eventually migrate to GNU/Linux 😎
+**Problem?** Tracking, surveillance and centralized ecosystems. **Approach?** Compartmentalization. **Goal?** increase privacy and security literacy; reduce fingerprinting; take back control; eventually migrate to GNU/Linux 😎
 {% endhint %}
 
 ## 🌍 Browsers
 
 {% hint style="info" %}
-Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedicated-profiles-firefox-installation#w_what-are-profiles) for different use cases. Below is my personal set up.
+Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedicated-profiles-firefox-installation#w_what-are-profiles).
 {% endhint %}
 
 {% tabs %}
@@ -20,7 +20,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 
 🔰 Default browser on all devices
 
-🔰 Logged in with a Firefox account in order to sync tabs and bookmarks
+🔰 Logged in with a Firefox account in order to sync bookmarks, extensions and tabs
 
 🔰 2 Factor-Authentication Enabled
 
@@ -30,7 +30,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 {% tab title="Firefox: Profile 2" %}
 **Browser: Firefox**
 
-🔰 Used to overthrown governments 😉
+🔰 Not user friendly 😉
 
 🔰 Most enhanced settings for privacy and security without relying on any addons with a custom [user.js](https://github.com/arkenfox/user.js/wiki/1.1-Overview) configuration file
 
@@ -40,7 +40,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 {% tab title="Brave: Profile" %}
 **Browser**: Brave Browser
 
-🔰 Used mostly for convenience when Firefox breaks
+🔰 Used for convenience when Firefox breaks
 {% endtab %}
 
 {% tab title="Chrome: Profile" %}
@@ -48,19 +48,21 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 
 🔰 Used solely for work and accessing Google Cloud Services
 
-🔰Cookies, search history always cleared after close by default
+🔰 Cookies, search history always cleared after close by default
+
 {% endtab %}
 {% endtabs %}
 
 ### ⚒️ Extensions
 
-- \*\*\*\*[**uBlock**](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)**:** Requires a set of manual custom [configurations](https://www.maketecheasier.com/ultimate-ublock-origin-superusers-guide/) - what domains to block.
-- \*\*\*\*[**User-Agent Switcher**](https://gitlab.com/ntninja/user-agent-switcher)**:** spoofs the user agent.
-- \*\*\*\*[**Decentraleyes**](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)**:** prevents fingerprinting.
-- [**Privacy Badger**](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/)**:** contains a list of most common trackers which is being updated by default.
-- \*\*\*\*[**Facebook Container**](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/): prevents Facebook to tracking you.
+- [**uBlock**](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/): Requires a set of manual custom [configurations](https://www.maketecheasier.com/ultimate-ublock-origin-superusers-guide/) - what domains to block
+- [**User-Agent Switcher**](https://gitlab.com/ntninja/user-agent-switcher): spoofs the user agent
+- [**Decentraleyes**](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/): prevents fingerprinting
+- [**Privacy Badger**](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/): contains a list of most common trackers which is being updated by default. Unline _uBlock_, does not require custom config
+- [**Facebook Container**](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/): prevents Facebook to tracking you
+- [**Firefox Multi-Account Containers**]: allows you to use the web with multiple identities or accounts simultaneously
 
-### 🧪 [Test Your Browser Against Tracking](https://panopticlick.eff.org/) <a id="test-your-browser-against-tracking"></a>
+### 🧪 [Test Browser Against Tracking](https://panopticlick.eff.org/) <a id="test-your-browser-against-tracking"></a>
 
 ![https://panopticlick.eff.org/](.gitbook/assets/pic_3.png)
 
@@ -69,8 +71,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 
 ### 🔍 Search Engines
 
-- [DuckDuckGo](https://duckduckgo.com/) default seach engine
-- [Startpage.com](https://startpage.com/)_"You can’t beat Google when it comes to online search."_ but there are ways how you can get answers and still get rid of trackers and logs
+- [DuckDuckGo](https://duckduckgo.com/) default search engine on all devices
 
 ### 🕵🏾‍♀️ Password Managers
 
@@ -88,7 +89,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 ## 💻 Operating System \(darwin\)
 
 {% hint style="danger" %}
-[**Y**](https://sneak.berlin/20201112/your-computer-isnt-yours/)\*\*\*\*[**our Computer Isn't Yours**](https://sneak.berlin/20201112/your-computer-isnt-yours/)**:** _**"**your computer serves a remote master, who has decided that they are entitled to spy on you."_
+[**Your Computer Isn't Yours**](https://sneak.berlin/20201112/your-computer-isnt-yours/):_"your computer serves a remote master, who has decided that they are entitled to spy on you."_
 {% endhint %}
 
 ### ⚡ Spoof MAC Address
@@ -153,11 +154,11 @@ EOF
 
 - ISP is selling your data
 - [NordVPN](https://nordvpn.com/)
-- [Apple Apps can bypass](https://appleterm.com/2020/10/20/macos-big-sur-firewalls-and-vpns/) VPN in OSX Big Sur 😢
+- [Mac OS X BigSur Does not bypass VPNS](https://www.reddit.com/r/vim/comments/k0jjqp/understanding_plugin_commands/)
 
 ### 👻 Secure your DNS Queries with Encrypted DNS
 
-- [DNS Server](https://www.lifewire.com/what-is-a-dns-server-2625854) is configured and using address space `127.0.0.1` which means it's using the configs of the router
+- [DNS Server](https://www.lifewire.com/what-is-a-dns-server-2625854) is configured and using address space `127.0.0.1` which means it's using the configuration of the router
 - By default the router pulls DNS Server from ISP
   - Root of the problem - ISP does not use `encrypted` DNS Server or `qname minimization`
     - **Purpose:** don't send the entire URL to each domain level to resolve the URL
@@ -177,4 +178,27 @@ dig +short txt qnamemintest.internet.nl
 - [NextDNS](https://my.nextdns.io/b71159/setup)
 - [Cloudflare ESNI Checker \| Cloudflare](https://www.cloudflare.com/ssl/encrypted-sni/)
 
+### DNS + VPN
+
+_placeholder_
+
 ### 😈 Little Snitch
+
+- makes Internet connections visible to your machine
+- application firewall layer
+
+![Little Snitch](.gitbook/assets/snitch.png)
+
+### 🔍 Spotlight
+
+- by default everything you type is sent to Apple
+- find out yourself: 👉 `sudo tcpdump | grep "api-bos.smoot.apple.com"`
+- Dissable in System Prefs -> Spotlight:
+  - _Spotlight Suggestions_
+  - _Allow Spotlight Suggestions in Look Up_
+
+### 2FA
+
+### SMS
+
+### Signal
