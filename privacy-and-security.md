@@ -1,11 +1,11 @@
 ---
-description: Collection of notes and hacks how to secure your privacy and security.
+description: Collection of notes and hacks how to enhance your privacy and security.
 ---
 
 # Privacy & Security
 
 {% hint style="danger" %}
-**Problem?** Tracking, surveillance and centralized ecosystems. **Approach?** Compartmentalization. **Goal?** increase privacy and security literacy; reduce fingerprinting; take back control; eventually migrate to GNU/Linux 😎
+**Problem?** Tracking, surveillance and centralized ecosystems. **Approach?** Compartmentalization. **Goal?** increase privacy and security literacy; reduce fingerprinting; take back control!
 {% endhint %}
 
 ## 🌍 Browsers
@@ -35,12 +35,6 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 🔰 Most enhanced settings for privacy and security without relying on any addons with a custom [user.js](https://github.com/arkenfox/user.js/wiki/1.1-Overview) configuration file
 
 **Resource**: [Enhance Your Browser's Privacy & Security with Ghacks/user.js](https://www.youtube.com/watch?v=rkVbsVskqc8&list=PL3cu45aM3C2BwSi8Nj5aBWTrbjbHiXxQo&index=2)
-{% endtab %}
-
-{% tab title="Brave: Profile" %}
-**Browser**: Brave Browser
-
-🔰 Used for convenience when Firefox breaks
 {% endtab %}
 
 {% tab title="Chrome: Profile" %}
@@ -73,7 +67,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 
 - [DuckDuckGo](https://duckduckgo.com/) default search engine on all devices
 
-### 🕵🏾‍♀️ Password Managers
+### 🕵🏾♀️ Password Managers
 
 - [1Password](https://1password.com/)
   - Convenient way to store and use passwords
@@ -84,7 +78,7 @@ Use different browsers and [profiles](https://support.mozilla.org/en-US/kb/dedic
 
 ### 📧 Emails
 
-- Proton
+- [ProtonMail](https://protonmail.com/)
 
 ## 💻 Operating System \(darwin\)
 
@@ -153,7 +147,8 @@ EOF
 ### 🚁 VPN
 
 - ISP is selling your data
-- [NordVPN](https://nordvpn.com/)
+- [NordVPN](https://nordvpn.com/) and like - [Don't Trust VPN Providers](https://www.youtube.com/watch?v=qMuYCxxRamc)
+- VPN providers might still log your data
 - [Mac OS X BigSur Does not bypass VPNS](https://www.reddit.com/r/vim/comments/k0jjqp/understanding_plugin_commands/)
 
 ### 👻 Secure your DNS Queries with Encrypted DNS
@@ -172,7 +167,7 @@ dig +short txt qnamemintest.internet.nl
 
 ![qname minimization](.gitbook/assets/qname.jpg)
 
-### 👨🏿‍🏭 DNS Providers
+### 👨 DNS Providers
 
 - [Encrypted DNS Resolvers \| PrivacyTools](https://www.privacytools.io/providers/dns/)
 - [NextDNS](https://my.nextdns.io/b71159/setup)
@@ -188,6 +183,10 @@ _placeholder_
 - application firewall layer
 
 ![Little Snitch](.gitbook/assets/snitch.png)
+
+### 🎧 Micro Snitch
+
+- Monitors and reports any microphone and camera activity
 
 ### 🔍 Spotlight
 
